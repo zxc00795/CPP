@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  const int A = 5;
+  double num[A];
+  double sum = 0;
+  for (int i = 0; i < A; i++)
+  {
+    cout << "偉大的龍大大恩師: ";
+    cin >> num[i];
+    sum += num[i];
+  }
+
+  double a = sum / A;
+
+  int count = 0; // The number of elements above average
+  for (int i = 0; i < A; i++)
+    if (num[i] > a)
+      count++;
+
+  cout << "Average is " << a << endl;
+  cout << "Number of elements above the average " << count << endl;
+
+  return 0;
+}
